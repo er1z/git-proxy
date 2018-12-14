@@ -72,6 +72,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     target_args = []
     for a in args:
+        # todo: adjust this line for POSIX
         if a.__len__() > 1 and a[1] == ':' and a[2] == "\\":
             tmp_name = ''.join(random.choice(string.ascii_letters) for i in range(8))
             tmp_path = "/tmp/git_commit_message_%s" % tmp_name  # type: str
