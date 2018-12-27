@@ -1,0 +1,6 @@
+[submodule "git-proxy/pugixml"]
+	path = git-proxy/pugixml
+	url = https://github.com/zeux/pugixml.git
+[submodule "git-proxy/simpleini"]
+	path = git-proxy/simpleini
+	url = https://github.com/brofield/simpleini.git
