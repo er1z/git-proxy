@@ -40,7 +40,13 @@ ProcessExecResult execute_command_io(std::string command, std::string input) {
 	std::string cout_result = "";
 
 	int i;
-	while ((i = is.get()) && i != EOF) {
+	while (!is.eof()) {
+		i = is.get();
+
+		if (i == EOF) {
+			break;
+		}
+
 		cout_result.append(1, char(i));
 	}
 

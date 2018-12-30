@@ -82,6 +82,12 @@ int main(int argc, char *argv[])
 	if (argc > 1) {
 
 		if (strcmp(argv[1], "version") == 0 || strcmp(argv[1], "--version") == 0) {
+
+			if (config->default_host().empty()) {
+				std::cerr << "no default host defined";
+				return -1;
+			}
+
 			debugger("quered git version info", "--version");
 			ProcessExecResult version_info = execute_remote_command_io(config->default_host(), "git --version", "");
 			std::cout << version_info.cout();

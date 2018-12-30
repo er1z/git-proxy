@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "project.h"
-#include "pugixml/pugixml.cpp"
+#include "pugixml/src/pugixml.cpp"
 #include "boost/filesystem.hpp"
 #include "debug.h"
 #include <boost/algorithm/string.hpp>
